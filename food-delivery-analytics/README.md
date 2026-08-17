@@ -17,6 +17,18 @@ This project looks at 8,000 food delivery orders in 6 Thai cities (Jan 2025–Ma
 | **Phuket has the most cancelled orders** | 5.73% of Phuket orders are cancelled. This is the highest of all 6 cities. Khon Kaen is the lowest, at 3.51%. | Check what's going wrong in Phuket: restaurants, couriers, or demand. |
 | **Slow delivery hurts customer ratings** | Longer delivery time clearly lowers customer rating (p < 0.001), even after controlling for other factors. | Faster delivery also means happier customers, not just better ops numbers. |
 
+## Hypothesis Testing
+
+Each finding above is backed by a formal statistical test, not just a visual comparison. Using OLS regression (R), we tested:
+
+| Hypothesis (H0: no effect) | Test | Result | Conclusion |
+|---|---|---|---|
+| Traffic level has no effect on delivery time | OLS regression, delivery time model | p < 0.001 for every traffic level | **Reject H0** — traffic level has a real effect |
+| City has no effect on delivery time (once traffic, weather, distance are controlled for) | OLS regression, delivery time model | p > 0.1 for every city | **Fail to reject H0** — city does not matter on its own |
+| Delivery time has no effect on customer rating | OLS regression, rating model | p < 0.001 | **Reject H0** — slower delivery really does lower ratings |
+| Distance has no effect on delivery time | OLS regression, delivery time model | p < 0.001 | **Reject H0** — distance is a strong driver |
+
+Full regression output (coefficients, standard errors, R²) is in [`r/regression_analysis.R`](./r/regression_analysis.R).
 ## Recommendations
 
 1. Focus on courier and route planning during high-traffic hours, not city-specific fixes.
