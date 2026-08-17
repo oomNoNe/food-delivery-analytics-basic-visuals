@@ -1,5 +1,5 @@
 # FoodOps Analytics: Delivery Performance & Growth Diagnostics
-
+🇹🇭 [อ่านภาษาไทย](./README_TH.md)
 **Business question:** Why are deliveries slow in some cities? Are our promo codes worth the money?
 
 This project looks at 8,000 food delivery orders in 6 Thai cities (Jan 2025–Mar 2026). It covers the full analyst workflow: clean the data, explore it, run statistics, write SQL, and build a dashboard.
