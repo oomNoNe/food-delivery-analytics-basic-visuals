@@ -35,16 +35,18 @@ Each finding is backed by a formal regression test (R), not just a visual compar
 
 **R² = 0.8997 | p-value < 2.2e-16**
 
-![Delivery time regression coefficients](assets/regression_delivery_1.png)
-![Delivery time regression significance](assets/regression_delivery_2.png)
+<img width="835" height="550" alt="image" src="https://github.com/user-attachments/assets/eb09e336-16ed-48e6-90ee-b984cfc95332" />
+<img width="769" height="487" alt="image" src="https://github.com/user-attachments/assets/48f7b7d3-1994-472b-b8aa-8ab9bcae2d2a" />
+
 
 ### Model 2: Customer Rating
 `customer_rating ~ delivery_time_min + distance_km + prep_time_min + traffic_level + weather + city + restaurant_category`
 
 **R² = 0.301 | p-value < 2.2e-16 | delivery_time_min coefficient = -0.0156** (each extra minute of delivery lowers rating by ~0.016)
 
-![Rating regression coefficients](assets/regression_rating_1.png)
-![Rating regression significance](assets/regression_rating_2.png)
+<img width="660" height="649" alt="image" src="https://github.com/user-attachments/assets/434a741d-1f19-44d3-bc24-496acef86338" />
+<img width="663" height="591" alt="image" src="https://github.com/user-attachments/assets/5d0a8a8d-010c-4ccc-a5d3-c6b92f5ad2e8" />
+
 
 Full R script: [`r/regression_analysis.R`](./r/regression_analysis.R)
 
