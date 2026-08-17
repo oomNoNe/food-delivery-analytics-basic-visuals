@@ -37,16 +37,18 @@
 
 **R² = 0.8997 | p-value < 2.2e-16**
 
-![Delivery time regression coefficients](assets/regression_delivery_1.png)
-![Delivery time regression significance](assets/regression_delivery_2.png)
+<img width="835" height="550" alt="image" src="https://github.com/user-attachments/assets/5821c504-5c14-4066-9921-dd7b5ea41361" />
+<img width="769" height="487" alt="image" src="https://github.com/user-attachments/assets/56c02170-cc52-4781-b4e8-21152d8537e5" />
+
 
 ### Model 2: Customer Rating
 `customer_rating ~ delivery_time_min + distance_km + prep_time_min + traffic_level + weather + city + restaurant_category`
 
 **R² = 0.301 | p-value < 2.2e-16 | ค่า coefficient ของ delivery_time_min = -0.0156** (ทุก 1 นาทีที่ส่งช้าขึ้น rating ลดลง ~0.016)
 
-![Rating regression coefficients](assets/regression_rating_1.png)
-![Rating regression significance](assets/regression_rating_2.png)
+<img width="660" height="649" alt="image" src="https://github.com/user-attachments/assets/c1153241-ee50-470f-93cf-5c43d2268753" />
+<img width="663" height="591" alt="image" src="https://github.com/user-attachments/assets/119bbcb4-e23e-43ae-9baf-12c364c971e3" />
+
 
 โค้ด R ฉบับเต็ม: [`r/regression_analysis.R`](./r/regression_analysis.R)
 
